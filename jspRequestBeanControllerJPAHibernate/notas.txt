@@ -1,0 +1,3 @@
+jspRequestBeanControllerJPAHibernate
+jsp with a request controller bean and a singleton BusinessDelegate with JPA Hibernate
+   
