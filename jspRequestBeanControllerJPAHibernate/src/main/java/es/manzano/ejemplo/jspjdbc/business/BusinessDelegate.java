@@ -65,7 +65,8 @@ public class BusinessDelegate {
 
 	public void updatePrimaria(Primaria primaria) {
 	    entityMgr.getTransaction().begin();
-	    entityMgr.persist(primaria);
+	    entityMgr.merge(primaria);
+	    //entityMgr.persist(primaria);		
 	    entityMgr.getTransaction().commit();
 	    entityMgr.clear();
 	}
