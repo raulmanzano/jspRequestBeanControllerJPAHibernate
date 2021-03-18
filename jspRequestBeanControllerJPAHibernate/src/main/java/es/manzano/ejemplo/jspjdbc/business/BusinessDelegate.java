@@ -49,6 +49,13 @@ public class BusinessDelegate {
 	    entityMgr.persist(parametro);
 	    entityMgr.getTransaction().commit();
 	    entityMgr.clear();
+		
+		//si hay problemas con hibernate JPA
+		//se suele devolver la quese persiste
+		//em.persist(t);
+      		//em.flush();
+      		//em.refresh(t);
+      		//return t;
 	}
 
 	public Primaria getById(Integer parameter) {
@@ -61,6 +68,11 @@ public class BusinessDelegate {
 	    entityMgr.remove(primaria);
 		entityMgr.getTransaction().commit();
 	    entityMgr.clear();
+		
+		//si hay problemas con hibernate JPA
+		//se suele devolver la quese persiste
+		//t = em.merge(t);
+      		//em.remove(t);
 	}
 
 	public void updatePrimaria(Primaria primaria) {
